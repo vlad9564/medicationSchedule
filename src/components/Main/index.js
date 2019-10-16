@@ -1,12 +1,10 @@
 import React from 'react';
 
 // Components import
-import QRScanner from '../QRScanner/index';
-import Bar from '../Bar/index';
-import MedicationList from '../MedicationList/index';
-import Clock from '../Clock/index';
-import Dialog from '../Dialog/index';
-import NavigationBar from "../NavigationBar/index";
+import BottomNav from '../BottomNav/bottom-nav.index';
+import MedicationList from '../MedicationList/medication-list.index';
+import Clock from '../Clock/clock.index';
+import Header from "../Header/header.index";
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
 
@@ -22,7 +20,7 @@ class Main extends React.Component {
     render() {
         return (
             <div>
-                <NavigationBar></NavigationBar>
+                <Header></Header>
                 <div style={{ marginTop: "4rem", paddingTop: "1rem" }}>
                     <div style={{ paddingLeft: "20%" }}>
                         <Clock></Clock>
@@ -42,7 +40,7 @@ class Main extends React.Component {
                         </Fab>
                     </div>
                 </div>
-                <Bar></Bar>
+                <BottomNav></BottomNav>
             </div>);
     }
 }

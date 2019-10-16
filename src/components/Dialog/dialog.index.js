@@ -6,7 +6,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
-import QRScanner from "../QRScanner/index";
+import QRScanner from "../QRScanner/qr-scanner.index";
 
 export default function AlertDialog() {
     const [open, setOpen] = React.useState(false);

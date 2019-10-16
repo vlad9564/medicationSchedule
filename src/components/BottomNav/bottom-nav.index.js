@@ -16,9 +16,7 @@ import { green, purple } from '@material-ui/core/colors';
 
 
 // Icons
-import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import ListIcon from "@material-ui/icons/List";
-import PhotoCamera from '@material-ui/icons/PhotoCamera';
 import ProfileIcon from "@material-ui/icons/AccountCircle";
 
 
@@ -43,7 +41,7 @@ class Bar extends React.Component {
             <div className="bar row" style={{ width: "-webkit-fill-available" }}>
                 <div className="col-6" style={{ textAlign: "center" }}>
                     <IconButton color="primary" aria-label="add to shopping cart">
-                        <ListIcon />
+                        <ListIcon style={{ fontSize: 40 }} />
                     </IconButton>
                 </div>
                 {/* <IconButton color="primary" aria-label="add to shopping cart">
@@ -51,7 +49,7 @@ class Bar extends React.Component {
                 </IconButton> */}
                 <div className="col-6" style={{ textAlign: "center" }}>
                     <IconButton color="primary" aria-label="add to shopping cart">
-                        <ProfileIcon />
+                        <ProfileIcon style={{ fontSize: 40, color: 'grey', opacity: 20 }} />
                     </IconButton>
                 </div>
 
