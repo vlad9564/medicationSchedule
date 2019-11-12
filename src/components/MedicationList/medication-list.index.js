@@ -5,13 +5,9 @@ import PillPortion from "./internal/PillPortion";
 import SchedulerIcon from "./internal/SchedulerIcon";
 
 class MedicationList extends React.Component {
-
-    listOfItems;
-
     constructor(props) {
         super(props);
         this.state = {}
-
     }
 
     onClickRow() {
@@ -20,7 +16,6 @@ class MedicationList extends React.Component {
 
     render() {
         return (
-
             <div style={{
                 height: "30rem", overflow: "scroll", paddingBottom: "7rem"
             }}>
@@ -46,14 +41,11 @@ class MedicationList extends React.Component {
                                 <div className="col-2">
                                     <ArrowIcon />
                                 </div>
-
                             </div>
                         )
                     )}
                 </List>
             </div >
-
-
         );
     }
 }

@@ -9,11 +9,13 @@ class SchedulerIcon extends React.Component {
     }
 
     checkAvailability(slot) {
+        let color;
         if (slot) {
-            return 'black'
+            color = 'black'
         } else {
-            return 'white'
+            color = 'white'
         }
+        return color
     }
 
     render() {

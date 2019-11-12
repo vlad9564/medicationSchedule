@@ -7,28 +7,24 @@ import Clock from '../Clock/clock.index';
 import Header from "../Header/header.index";
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
-
-
-
-// Other imports
+import { Pill } from '../../model/Pill.model';
+import { PortionEnum } from "../../model/PortionEnum.ts";
+import { Scheduler } from "../../model/Scheduler.model";
 
 const PILLS = [
-    { name: 'Aspirin', portion: 'half', scheduler: { morning: true, lunch: false, evening: false } },
-    { name: 'Pill 3', portion: 'full', scheduler: { morning: false, lunch: false, evening: true } },
-    { name: 'Pill 8', portion: 'half', scheduler: { morning: true, lunch: false, evening: true } },
-    { name: 'Pill 7', portion: 'quarter', scheduler: { morning: true, lunch: true, evening: false } },
-    { name: 'Something', portion: 'half', scheduler: { morning: true, lunch: true, evening: true } },
-    { name: 'Pill to take', portion: 'full', scheduler: { morning: true, lunch: false, evening: false } },
-    { name: 'Para', portion: 'half', scheduler: { morning: true, lunch: false, evening: true } },
-    { name: 'Pill for pain', portion: 'quarter', scheduler: { morning: true, lunch: false, evening: false } },
-    { name: 'Pill 2', portion: 'full', scheduler: { morning: true, lunch: true, evening: false } },
-    { name: 'Headache', portion: 'quarter', scheduler: { morning: false, lunch: false, evening: true } },
+    new Pill('Aspirin', PortionEnum.HALF, new Scheduler(true, false, false)),
+    new Pill('Pill 3', PortionEnum.FULL, new Scheduler(false, false, true)),
+    new Pill('Pill 8', PortionEnum.HALF, new Scheduler(true, false, true)),
+    new Pill('Pill 7', PortionEnum.QUARTER, new Scheduler(true, true, true)),
+    new Pill('Something', PortionEnum.HALF, new Scheduler(false, false, true)),
+    new Pill('Pill to take', PortionEnum.FULL, new Scheduler(false, false, true)),
+    new Pill('Para', PortionEnum.HALF, new Scheduler(false, true, false)),
+    new Pill('Pill for pain', PortionEnum.QUARTER, new Scheduler(true, false, false)),
+    new Pill('Pill 2', PortionEnum.FULL, new Scheduler(true, false, true)),
+    new Pill('Headache', PortionEnum.QUARTER, new Scheduler(false, true, true))
 ]
 
-
 class Main extends React.Component {
-
-
     constructor(props) {
         super(props);
         this.state = {}
