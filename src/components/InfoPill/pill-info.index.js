@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import MainPage from "../Main/index";
+import MainPage from "../../pages/Main/index";
 import NavigationBar from "../NavigationBar/index";
 import PillInfo from "./PillInfo";
 
