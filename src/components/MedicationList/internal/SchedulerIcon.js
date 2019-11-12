@@ -8,18 +8,25 @@ class SchedulerIcon extends React.Component {
         this.state = {}
     }
 
+    checkAvailability(slot) {
+        if (slot === 1) {
+            return 'black'
+        } else {
+            return 'white'
+        }
+    }
+
     render() {
         return (
             <div className="row" style={{ height: "100%" }}>
                 <div className="col" style={{ padding: "0rem" }}>
-                    <div className="row" style={{ border: "1px solid black", backgroundColor: "white", height: "33.3%" }}>
+                    <div className="row" style={{ border: "1px solid black", backgroundColor: this.checkAvailability(this.props.scheduler[0]), height: "33.3%" }}>
                     </div>
-                    <div className="row" style={{ border: "1px solid black", backgroundColor: "black", height: "33.3%" }}>
+                    <div className="row" style={{ border: "1px solid black", backgroundColor: this.checkAvailability(this.props.scheduler[1]), height: "33.3%" }}>
                     </div>
-                    <div className="row" style={{ border: "1px solid black", backgroundColor: "white", height: "33.3%" }}>
+                    <div className="row" style={{ border: "1px solid black", backgroundColor: this.checkAvailability(this.props.scheduler[2]), height: "33.3%" }}>
                     </div>
                 </div>
-
             </div>
         )
     }
