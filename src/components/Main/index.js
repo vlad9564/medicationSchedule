@@ -13,16 +13,16 @@ import AddIcon from '@material-ui/icons/Add';
 // Other imports
 
 const PILLS = [
-    { name: 'Aspirin', portion: 'half', scheduler: [1, 0, 0] },
-    { name: 'Pill 3', portion: 'full', scheduler: [0, 0, 1] },
-    { name: 'Pill 8', portion: 'half', scheduler: [1, 0, 1] },
-    { name: 'Pill 7', portion: 'quarter', scheduler: [1, 1, 0] },
-    { name: 'Something', portion: 'half', scheduler: [0, 1, 1] },
-    { name: 'Pill to take', portion: 'full', scheduler: [1, 0, 0] },
-    { name: 'Para', portion: 'half', scheduler: [1, 0, 1] },
-    { name: 'Pill for pain', portion: 'quarter', scheduler: [1, 0, 0] },
-    { name: 'Pill 2', portion: 'full', scheduler: [1, 1, 0] },
-    { name: 'Headache', portion: 'quarter', scheduler: [0, 0, 1] },
+    { name: 'Aspirin', portion: 'half', scheduler: { morning: true, lunch: false, evening: false } },
+    { name: 'Pill 3', portion: 'full', scheduler: { morning: false, lunch: false, evening: true } },
+    { name: 'Pill 8', portion: 'half', scheduler: { morning: true, lunch: false, evening: true } },
+    { name: 'Pill 7', portion: 'quarter', scheduler: { morning: true, lunch: true, evening: false } },
+    { name: 'Something', portion: 'half', scheduler: { morning: true, lunch: true, evening: true } },
+    { name: 'Pill to take', portion: 'full', scheduler: { morning: true, lunch: false, evening: false } },
+    { name: 'Para', portion: 'half', scheduler: { morning: true, lunch: false, evening: true } },
+    { name: 'Pill for pain', portion: 'quarter', scheduler: { morning: true, lunch: false, evening: false } },
+    { name: 'Pill 2', portion: 'full', scheduler: { morning: true, lunch: true, evening: false } },
+    { name: 'Headache', portion: 'quarter', scheduler: { morning: false, lunch: false, evening: true } },
 ]
 
 
