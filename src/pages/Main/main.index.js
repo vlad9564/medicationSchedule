@@ -32,7 +32,7 @@ class Main extends React.Component {
     render() {
         return (
             <div>
-                <Header></Header>
+                <Header page={this.props.page}></Header>
                 <div style={{ marginTop: "4rem", paddingTop: "1rem" }}>
                     <div style={{ paddingLeft: "20%" }}>
                         <Clock></Clock>
@@ -49,8 +49,9 @@ class Main extends React.Component {
                         </Fab>
                     </div>
                 </div>
-                <BottomNav></BottomNav>
-            </div>);
+                <BottomNav onPageChange={this.props.onPageChange} page={this.props.page}></BottomNav>
+            </div>
+        );
     }
 }
 

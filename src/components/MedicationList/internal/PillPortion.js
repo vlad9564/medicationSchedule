@@ -3,7 +3,7 @@ import "../style.css";
 import RadioButtonUncheckedIcon from '@material-ui/icons/RadioButtonUnchecked';
 import NotInterestedIcon from '@material-ui/icons/NotInterested';
 import DonutLargeIcon from '@material-ui/icons/DonutLarge';
-
+import { PortionEnum } from '../../../model/PortionEnum.ts';
 
 class PillPortion extends React.Component {
 
@@ -13,17 +13,17 @@ class PillPortion extends React.Component {
     }
 
     render() {
-        if (this.props.portion === 'full') {
+        if (this.props.portion === PortionEnum.FULL) {
             return (
                 <RadioButtonUncheckedIcon fontSize="medium" />
             )
         }
-        if (this.props.portion === 'half') {
+        if (this.props.portion === PortionEnum.HALF) {
             return (
                 <NotInterestedIcon cfontSize="large" />
             )
         }
-        if (this.props.portion === 'quarter') {
+        if (this.props.portion === PortionEnum.QUARTER) {
             return (
                 <DonutLargeIcon cfontSize="large" />
             )
