@@ -10,6 +10,11 @@ import ClearIcon from '@material-ui/icons/Clear';
 class Header extends React.Component {
     constructor(props) {
         super(props);
+        this.goToMainPageWithoutSave = this.goToMainPageWithoutSave.bind(this);
+    }
+
+    goToMainPageWithoutSave() {
+        this.props.onPageChange(PagesEnum.MAIN_PAGE);
     }
 
     render() {
@@ -30,7 +35,7 @@ class Header extends React.Component {
         if (this.props.page === PagesEnum.PROFILE_PAGE) {
             return (
                 <div className="topBar row" style={{ width: "-webkit-fill-available", position: "fixed", zIndex: "1" }}>
-                    <div className="col-2" style={{ textAlign: "center" }}>
+                    <div className="col-2" style={{ textAlign: "center", paddingLeft: "5%" }} onClick={this.goToMainPageWithoutSave}>
                         <ClearIcon fontSize="large" style={{ margin: "40% 70% 0% 0%" }} />
                     </div>
                     <div className="col-8" style={{ textAlign: "left" }}>
