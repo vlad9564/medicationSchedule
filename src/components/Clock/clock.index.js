@@ -1,7 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Clock from 'react-clock';
 
-export default class MyApp extends Component {
+class ClockComponent extends React.Component {
+    constructor(props) {
+        super(props);
+    }
     state = {
         date: new Date(),
     }
@@ -19,9 +22,11 @@ export default class MyApp extends Component {
                 {/* <p>Current time:</p> */}
                 <Clock
                     value={this.state.date}
-                    size={250}
+                    size={this.props.zise}
                 />
             </div>
         );
     }
 }
+
+export default ClockComponent;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { PagesEnum } from '../model/PagesEnum.ts';
 import MainPage from './Main/main.index';
+import InfoPill from './InfoPill/info-pill.index';
 import ProfilePage from './Profile/profile.index';
 import { Pill } from '../model/Pill.model';
 import { PortionEnum } from "../model/PortionEnum.ts";
@@ -26,9 +27,11 @@ class PagesManager extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            page: PagesEnum.MAIN_PAGE
+            page: PagesEnum.MAIN_PAGE,
+            selectedPill: ''
         }
         this.handlePageChange = this.handlePageChange.bind(this);
+        this.handleSelectPill = this.handleSelectPill.bind(this);
     }
 
     handlePageChange(page) {
@@ -37,11 +40,19 @@ class PagesManager extends React.Component {
         })
     }
 
+    handleSelectPill(selectedPill) {
+        this.setState({
+            selectedPill: selectedPill
+        })
+    }
+
     render() {
         if (this.state.page === PagesEnum.MAIN_PAGE) {
-            return (<MainPage onPageChange={this.handlePageChange} page={this.state.page} pillList={PILLS} />);
+            return (<MainPage onPageChange={this.handlePageChange} page={this.state.page} pillList={PILLS} selectedPill={this.handleSelectPill} />);
         } else if (this.state.page === PagesEnum.PROFILE_PAGE) {
             return (<ProfilePage onPageChange={this.handlePageChange} page={this.state.page} personInfo={PERSON_INFO} />);
+        } else if (this.state.page === PagesEnum.PILL_INFO) {
+            return (<InfoPill onPageChange={this.handlePageChange} page={this.state.page} pillInfo={this.state.selectedPill} />);
         }
     }
 

@@ -11,7 +11,9 @@ import AddIcon from '@material-ui/icons/Add';
 class Main extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+            size: 250
+        }
     }
     render() {
         return (
@@ -19,12 +21,12 @@ class Main extends React.Component {
                 <Header page={this.props.page}></Header>
                 <div style={{ marginTop: "4rem", paddingTop: "1rem" }}>
                     <div style={{ paddingLeft: "20%" }}>
-                        <Clock></Clock>
+                        <Clock zise={this.state.size}></Clock>
                     </div>
                     <div>
                         {/* <Dialog></Dialog> */}
                     </div>
-                    <MedicationList pills={this.props.pillList}></MedicationList>
+                    <MedicationList pills={this.props.pillList} onPageChange={this.props.onPageChange} selectedPill={this.props.selectedPill}></MedicationList>
                 </div>
                 <div className="row" style={{ position: "fixed", width: "-webkit-fill-available", bottom: "5.5rem" }}>
                     <div className="col-12" style={{ textAlign: "center", marginBottom: "-10px" }}>

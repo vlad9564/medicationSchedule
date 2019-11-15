@@ -7,11 +7,11 @@ import SchedulerIcon from "./SchedulerIcon";
 class MedicationRow extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.onClickRow = this.onClickRow.bind(this);
     }
 
     onClickRow() {
-        console.log("row has been selected");
+        this.props.selectedPill(this.props.element);
     }
 
     render() {

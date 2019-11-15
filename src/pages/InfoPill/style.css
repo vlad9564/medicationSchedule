@@ -1,0 +1,19 @@
+.globalMargin{
+  margin: 8% 8%;
+}
+
+.title {
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+.text{
+  font-weight: bold;
+}
+
+.container {
+  padding-top: 5%;
+  margin-bottom: 10%;
+}
+

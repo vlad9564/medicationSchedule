@@ -47,6 +47,23 @@ class Header extends React.Component {
                 </div>
             );
         }
+
+
+        if (this.props.page === PagesEnum.PILL_INFO) {
+            return (
+                <div className="topBar row" style={{ width: "-webkit-fill-available", position: "fixed", zIndex: "1" }}>
+                    <div className="col-2" style={{ textAlign: "center", paddingLeft: "5%" }} onClick={this.goToMainPageWithoutSave}>
+                        <ClearIcon fontSize="large" style={{ margin: "40% 70% 0% 0%" }} />
+                    </div>
+                    <div className="col-8" style={{ textAlign: "left" }}>
+                        <b><label style={{ paddingTop: "1.5rem" }}>INFO PILL</label></b>
+                    </div>
+                    <div className="col-2" style={{ textAlign: "center" }}>
+                        <CheckIcon fontSize="large" style={{ margin: "40% 70% 0% 0%" }} />
+                    </div>
+                </div>
+            );
+        }
     }
 }
 
