@@ -9,7 +9,7 @@ class SchedulerComponent extends React.Component {
 
     render() {
         return (
-            <div className="row">
+            <div className="row" style={{ width: "100%" }}>
                 <div className="col-4 d-flex justify-content-center">
                     <SchedulerSlotComponent slot={this.props.scheduler.morning} />
                 </div>

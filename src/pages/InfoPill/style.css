@@ -1,5 +1,5 @@
 .globalMargin{
-  margin: 8% 8%;
+  margin: 10% 8%;
 }
 
 .title {
@@ -14,6 +14,10 @@
 
 .container {
   padding-top: 5%;
-  margin-bottom: 10%;
+  margin-bottom: 15%;
 }
 
+.infoPillDeleteButton{
+  position: fixed;
+  bottom: 5%
+}
