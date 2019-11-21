@@ -75,8 +75,10 @@ class InfoPill extends React.Component {
                     </div>
                 </div>
 
-                <div className="infoPillDeleteButton d-flex justify-content-end">
-                    <Button color="danger">DELETE</Button>
+                <div className="infoPillDeleteButton  row">
+                    <div className="col-12 d-flex justify-content-center">
+                        <Button color="danger">DELETE</Button>
+                    </div>
                 </div>
             </div>
         )

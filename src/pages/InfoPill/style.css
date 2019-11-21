@@ -19,5 +19,6 @@
 
 .infoPillDeleteButton{
   position: fixed;
-  bottom: 5%
+  bottom: 5%;
+  width: -webkit-fill-available;
 }

@@ -6,6 +6,7 @@ import { PagesEnum } from '../../model/PagesEnum.ts';
 import CheckIcon from '@material-ui/icons/Check';
 import HealthIcon from "@material-ui/icons/AddToQueue";
 import ClearIcon from '@material-ui/icons/Clear';
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 
 class Header extends React.Component {
     constructor(props) {
@@ -60,6 +61,19 @@ class Header extends React.Component {
                     </div>
                     <div className="col-2" style={{ textAlign: "center" }}>
                         <CheckIcon fontSize="large" style={{ margin: "40% 70% 0% 0%" }} />
+                    </div>
+                </div>
+            );
+        }
+
+        if (this.props.page === PagesEnum.ADD_MEDICATION_PAGE) {
+            return (
+                <div className="topBar row" style={{ width: "-webkit-fill-available", position: "fixed", zIndex: "1" }}>
+                    <div className="col-2" style={{ textAlign: "center", paddingLeft: "5%" }} onClick={this.goToMainPageWithoutSave}>
+                        <ArrowBackIosIcon fontSize="large" style={{ margin: "40% 70% 0% 0%" }} />
+                    </div>
+                    <div className="col-10" style={{ textAlign: "left" }}>
+                        <b><label style={{ paddingTop: "1.5rem" }}>ADD MEDICATION</label></b>
                     </div>
                 </div>
             );
